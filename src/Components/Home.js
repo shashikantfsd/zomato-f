@@ -16,7 +16,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://zom-b.herokuapp.com/getLocations')
+        axios.get('https://zom-b.herokuapp.com/api/getLocations')
             .then(result => {
                 this.setState({
                     locations: result.data.locations
@@ -26,7 +26,7 @@ class Home extends Component {
                 console.log(error);
             });
 
-        axios.get('https://zom-b.herokuapp.com/getMealTypes')
+        axios.get('https://zom-b.herokuapp.com/api/getMealTypes')
             .then(result => {
                 this.setState({
                     mealtypes: result.data.mealtypes
