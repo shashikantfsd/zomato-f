@@ -42,7 +42,7 @@ class Details extends Component {
         const { id } = qs;
 
         // make an API call to get the restaurant details for the given id
-        axios.get(`https://backendshivesh2022.herokuapp.com//api/getRestaurantByID/${id}`)
+        axios.get(`https://backendshivesh2022.herokuapp.com/api/getRestaurantByID/${id}`)
             .then(result => {
                 this.setState({
                     restaurant: result.data.restaurant[0]
