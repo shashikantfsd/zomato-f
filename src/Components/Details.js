@@ -42,7 +42,7 @@ class Details extends Component {
         const { id } = qs;
 
         // make an API call to get the restaurant details for the given id
-        axios.get(`https://zom-b.herokuapp.com/api/getRestaurantByID/${id}`)
+        axios.get(`https://backendshivesh2022.herokuapp.com//api/getRestaurantByID/${id}`)
             .then(result => {
                 this.setState({
                     restaurant: result.data.restaurant[0]
@@ -52,7 +52,7 @@ class Details extends Component {
                 console.log(error);
             });
         
-        axios.get(`https://zom-b.herokuapp.com/api/getMenuByRestaurant/${id}`)
+        axios.get(`https://backendshivesh2022.herokuapp.com/api/getMenuByRestaurant/${id}`)
             .then(result => {
                 this.setState({
                     menu: result.data.menu
@@ -89,7 +89,7 @@ class Details extends Component {
     }
 
     getCheckSum = (data) => {
-        return fetch('https://zom-b.herokuapp.com/api/payment', {
+        return fetch('https://backendshivesh2022.herokuapp.com/api/payment', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',

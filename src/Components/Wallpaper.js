@@ -22,7 +22,7 @@ class Wallpaper extends Component {
         localStorage.setItem("city_id", city_id);
 
         // fetch the restaurants for the location  selected by the user
-        axios.get(`hhttps://zom-b.herokuapp.com/api/getRestaurantByLocation/${cityName}`)
+        axios.get(`https://backendshivesh2022.herokuapp.com/api/getRestaurantByLocation/${cityName}`)
             .then(result => {
                 this.setState({
                     restaurants: result.data.restaurants

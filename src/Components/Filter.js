@@ -36,7 +36,7 @@ class Filter extends Component {
             mealTypeName: mealTypeName
         });
         const city_id = localStorage.getItem("city_id");
-        axios.get('https://zom-b.herokuapp.com/api/getLocations')
+        axios.get('https://backendshivesh2022.herokuapp.com/api/getLocations')
             .then(result => {
                 const locations = result.data.locations;
                 const selectedCity = locations.find(city => city.city_id == city_id);
@@ -135,7 +135,7 @@ class Filter extends Component {
         }
         axios({
             method: 'POST',
-            url: 'https://zom-b.herokuapp.com/api/filterRestaurants',
+            url: 'https://backendshivesh2022.herokuapp.com/api/filterRestaurants',
             headers: { 'Content-Type': 'application/json' },
             data: req
         }).then(result => {

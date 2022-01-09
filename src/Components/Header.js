@@ -99,7 +99,7 @@ class Header extends Component {
         }
         axios({
             method: 'POST',
-            url: 'http://localhost:5402/api/userLogin',
+            url: 'https://backendshivesh2022.herokuapp.com/api/userLogin',
             header: { 'Content-Type': 'application/json' },
             data: obj
         }).then(result => {
@@ -129,7 +129,7 @@ class Header extends Component {
         }
         axios({
             method: 'POST',
-            url: 'http://localhost:5402/api/userSignUp',
+            url: 'https://backendshivesh2022.herokuapp.com/api/userSignUp',
             header: { 'Content-Type': 'application/json' },
             data: obj
         }).then(result => {
